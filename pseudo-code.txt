@@ -1,0 +1,32 @@
+onkeyup to see what user pressed
+toLowerCase to make sure all keys pressed by user coincide with computers guessed letter
+
+LETTERS - computer
+have the computer generate random letter between A and Z
+
+Start win count at 0
+Start loss count at 0
+Start guesses left at 10
+Start gusses made so far blank with no letters showing
+
+WINS
+if user guesses letter === to computer guesses then increase wins by 1 and restart game
+
+else
+deduct guesses left by 1 and print letter under guesses made so far
+
+if
+guesses left === 0 then increase losses by 1 and restart game
+
+LOSSES
+if user guesses letter !== computer guess then 
+
+print letter to guesses made so far and deduct guesses by 1
+
+if
+guesses left === 0 then increase losses by 1 and restart game
+
+
+
+______________________
+could have an alert asking if the person is ready to begin the game and give them instructions?
