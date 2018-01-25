@@ -17,27 +17,29 @@ var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 document.onkeyup = function (event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
     
+    console.log(userGuess);
+    
     if (guesses.indexOf(userGuess) < 0 && letters.indexOf(userGuess) >= 0) {
         guesses[guesses.length] = userGuess;
         guessCount --;
     }
     
-    if (guessCount >= 1 || guessCount <= 10) {
-        getRandomLetter ();    
-    }
+   if (guessCount >= 1 || guessCount <= 10) {
+       getRandomLetter ();    
+   }
 
     else {
         gameStatus();
         //alert("Do you want to play again?");
-    };
+    }
     
     if (userGuess === computerGuess){
         updateWins();
-    };
+    }
     
     if (userGuess != computerGuess && guessCount === 0){
         updateLosses();
-    };
+    }
        
         
   };
@@ -45,16 +47,16 @@ document.onkeyup = function (event) {
 
 function updateWins() {
     document.querySelector("#wins").innerHTML = win++;
-};
+}
 
 //function that updates the losses on the page
 function updateLosses() {
     document.querySelector("#losses").innerHTML = loss++;
-};
+}
 
 function gameStatus() {
     document.querySelector("#gameOver").innerHTML = "Game Over!";
-};
+}
 
 
 
